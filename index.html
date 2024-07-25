@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHEIN-MAIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Amiri&display=swap" rel="stylesheet">
+    <style>
+    * {
+        box-sizing: border-box !important;
+        outline: none !important;
+    }
+    body {
+        background: #FDFDF0;
+        color: #000;
+        font-family: 'Maven Pro', sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    main,header,nav,section,footer {
+        display: block;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    main {
+        overflow-x: clip;
+        position: relative;
+    }
+    .container {
+        margin: 0 auto;
+        max-width: 1690px;
+        padding: 0 15px;
+    }
+    .resetul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .topbar {
+        border-bottom: 1px solid rgba(88,88,88,.5);
+        padding: 17px 0;
+    }
+    .topbar a {
+        color: #55575F;
+        text-transform: uppercase;
+    }
+    .topbar-group {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .topbar-nav ul {
+        display: flex;
+    }
+    .topbar-nav li:not(:last-child) {
+        margin-right: 100px;
+    }
+    .topbar-tel {
+        display: flex;
+    }
+    .topbar-tel img {
+        margin-right: 16px;
+    }
+    .gallery {
+        padding: 70px 0 100px;
+    }
+    .gallery .container {
+        position: relative;
+    }
+    .gallery-inner {
+        position: relative;
+        z-index: 2;
+    }
+    .gallery h1 {
+        font-family: 'Amiri', serif;
+        margin: 0;
+        line-height: 1.2;
+        color: #55575F;
+        font-size: 150px;
+    }
+    .gallery-subtitle {
+        font-size: 22px;
+        color: #9296A2;
+        max-width: 1020px;
+        margin-bottom: 70px;
+    }
+    .gallery-music {
+        position: absolute;
+        top: -55px;
+        right: -85px;
+    }
+    .gallery-list {
+        margin: 0 -10px;
+        display: flex;
+    }
+    .gallery-list li {
+        padding: 0 10px;
+    }
+    .der {
+        background: #55575F;
+        padding: 100px 0 90px;
+    }
+    .der-list {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+    .der-list li {
+        width: 33.3333%;
+    }
+    .der-list img {
+        margin: 0 auto 30px;
+    }
+    .der-list strong {
+        display: block;
+        font-size: 22px;
+        margin: 0 auto;
+        max-width: 390px;
+        text-align: center;
+    }
+    .about h2 {
+        color: #55575F;
+        font-family: 'Amiri', serif;
+        font-size: 80px;
+        line-height: 1.2;
+        margin: 0 0 55px;
+        position: relative;
+        text-align: center;
+    }
+    .about {
+        padding: 100px 0;
+    }
+    .about-inner {
+        display: flex;
+        position: relative;
+        z-index: 2;
+    }
+    .about .container {
+        position: relative;
+    }
+    .about-dish {
+        position: absolute;
+        right: -80px;
+        top: -70px;
+    }
+    .about-plate {
+        flex-shrink: 0;
+        max-width: 762px;
+        width: 46%;
+    }
+    .about-plate img {
+        position: sticky;
+        top: 0;
+    }
+    .about-content {
+        padding-left: 80px;
+    }
+    .about-content p {
+        color: #9296A2;
+        font-size: 22px;
+        margin: 0 0 60px;
+    }
+    .about-subtitle {
+        color: #99768C;
+        font-family: 'Amiri', serif;
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .about-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    .about-list li {
+        color: #919296;
+        font-size: 20px;
+        margin-bottom: 17px;
+        padding-right: 20px;
+        width: 33.3333%;
+    }
+    .about-list li:nth-child(6n-3),
+    .about-list li:nth-child(6n-4),
+    .about-list li:nth-child(6n-5) {
+        color: #55575F;
+    }
+    .btn {
+        background: #99768C;
+        border-radius: 40px;
+        color: #fff;
+        display: block;
+        font-family: 'Amiri', serif;
+        font-size: 20px;
+        height: 60px;
+        line-height: 1;
+        padding-top: 22px;
+        text-align: center;
+        text-decoration: none !important;
+        text-transform: uppercase;
+        transition: .3s;
+        width: 240px;
+    }
+    .btn:hover {
+        background: #55575F;
+    }
+    .botbar {
+        background: #55575F;
+        padding: 60px 0 22px;
+    }
+    .botbar-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    .botbar a {
+        color: #fff;
+    }
+    .topbar-nav a, .botbar-nav a {
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+    }
+    .botbar-nav ul {
+        display: flex;
+        padding-top: 15px;
+    }
+    .botbar-nav li:not(:last-child) {
+        margin-right: 100px
+    }
+    .botbar-links a {
+        align-items: center;
+        display: flex;
+    }
+    .botbar-links a:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    .botbar-links img {
+        margin-right: 12px;
+    }
+    .botbar-copy {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.2;
+        opacity: .5;
+        text-align: center;
+    }
+    @media (max-width: 1699px) {
+        .container {
+            max-width: 1200px;
+        }
+        .gallery h1 {
+            font-size: 110px;
+        }
+        .gallery-subtitle {
+            max-width: 800px;
+        }
+        .about-content {
+            padding-left: 50px;
+        }
+        .about-subtitle {
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .about-list {
+            margin-bottom: 30px;
+        }
+        .about-list li {
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+    }
+    @media (max-width: 1199px) {
+        .topbar,
+        .botbar {
+            font-size: 16px;
+        }
+        .topbar-nav li:not(:last-child),
+        .botbar-nav li:not(:last-child) {
+            margin-right: 50px;
+        }
+        .gallery,
+        .der,
+        .about {
+            padding: 70px 0;
+        }
+        .gallery h1 {
+            font-size: 80px;
+        }
+        .gallery-music {
+            right: 0;
+            width: 210px;
+        }
+        .gallery-subtitle {
+            font-size: 20px;
+            margin-bottom: 50px;
+            max-width: 570px;
+        }
+        .der-list img {
+            width: 100px;
+        }
+        .der-list strong {
+            font-size: 18px;
+        }
+        .about h2 {
+            font-size: 60px;
+            margin-bottom: 40px;
+        }
+        .about-dish {
+            right: 0;
+            top: -50px;
+            width: 220px;
+        }
+        .about-list li {
+            line-height: 1.2;
+            word-wrap: break-word;
+        }
+    }
+    @media (max-width: 991px) {
+        .topbar-nav li:not(:last-child),
+        .botbar-nav li:not(:last-child) {
+            margin-right: 30px;
+        }
+        .topbar-nav a,
+        .botbar-nav a {
+            letter-spacing: 1.5px;
+        }
+        .botbar-group {
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .botbar-nav ul {
+            padding-top: 0;
+        }
+        .gallery h1 {
+            font-size: 60px;
+        }
+        .gallery-subtitle {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 420px;
+        }
+        .gallery,
+        .der,
+        .about {
+            padding: 50px 0;
+        }
+        .gallery-music {
+            right: 0;
+            top: -40px;
+            width: 150px;
+        }
+        .der-list strong {
+            font-size: 16px;
+            padding: 0 15px;
+        }
+        .der-list img {
+            margin-bottom: 20px;
+        }
+        .about-inner {
+            display: block;
+        }
+        .about-content {
+            margin: 0 auto;
+            max-width: 740px;
+            padding-left: 0;
+        }
+        .about-content p {
+            font-size: 16px;
+        }
+        .about-list li {
+            font-size: 16px;
+        }
+        .about-plate {
+            margin: 0 auto 30px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .about-plate img {
+            height: 450px;
+            object-fit: cover;
+            position: static;
+        }
+        .about h2 {
+            margin-bottom: 30px;
+        }
+        .about-dish {
+            right: 0;
+            top: -40px;
+            width: 200px;
+        }
+        .about-list {
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 767px) {
+        .gallery-music,
+        .about-dish {
+            display: none;
+        }
+        .topbar {
+            padding: 30px 0;
+        }
+        .botbar {
+            padding-top: 50px;
+        }
+        .topbar-group,
+        .botbar-group {
+            display: block;
+        }
+        .logo,
+        .logo2 {
+            display: table;
+            margin: 0 auto 30px;
+        }
+        .topbar-nav ul,
+        .botbar-nav ul {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .topbar-tel {
+            justify-content: center;
+        }
+        .botbar-links {
+            display: table;
+            margin: 0 auto;
+        }
+        .gallery {
+            padding-top: 30px;
+        }
+        .gallery h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .gallery-subtitle {
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        .gallery-list-wrap {
+            margin-right: -15px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        .gallery-list {
+            margin: 0;
+        }
+        .gallery-list img {
+            max-width: 300px;
+            width: 300px;
+        }
+        .gallery-list li {
+            padding: 0 15px 0 0;
+        }
+        .der-list {
+            display: block;
+        }
+        .der-list li {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .der-list img {
+            margin-bottom: 15px;
+        }
+        .der-list strong {
+            max-width: 300px;
+        }
+        .der {
+            padding-bottom: 20px;
+        }
+        .about h2 {
+            font-size: 42px;
+        }
+        .about-subtitle {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .about-content p {
+            margin-bottom: 30px;
+        }
+        .about-list li {
+            color: #919296 !important;
+            width: 50%;
+        }
+        .about-list li:nth-child(4n-2),
+        .about-list li:nth-child(4n-3) {
+            color: #55575F !important;
+        }
+        .about-list li:nth-child(even) {
+            padding-right: 0;
+        }
+        .btn {
+            font-size: 18px;
+            height: 45px;
+            margin: 0 auto;
+            padding-top: 16px;
+            width: 220px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <main><div class="wrapper">
+        <header class="topbar">
+            <div class="container topbar-group">
+                <a href="/" class="logo">
+                    <img src="./img/logo.svg" alt="logo" width="193" height="118">
+                </a>
+                <nav class="topbar-nav">
+                    <ul class="resetul">
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:017667451011" class="topbar-tel">
+                    <img src="./img/tel.svg" alt="phone number" width="14" height="24">
+                    <span>0176 6745 1011</span>
+                </a>
+            </div>
+        </header>
+
+
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <img src="./img/music.webp" alt="music" class="gallery-music" width="428" height="516">
+                <div class="gallery-inner">
+                    <h1>Vintage Elegance</h1>
+                    <div class="gallery-subtitle">Der Verkauf erfolgt über Versteigerungsplattformen wie ebay, Catawiki und direkt an entsprechende Sammler.</div>
+                    <div class="gallery-list-wrap">
+                        <ul class="resetul gallery-list">
+                            <li>
+                                <a href="./img/gallery1.webp">
+                                    <img src="./img/gallery1.webp" alt="gallery 1" width="540" height="640">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./img/gallery2.webp">
+                                    <img src="./img/gallery2.webp" alt="gallery 2" width="540" height="640">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./img/gallery3.webp">
+                                    <img src="./img/gallery3.webp" alt="gallery 3" width="540" height="640">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="der">
+            <div class="container">
+                <ul class="resetul der-list">
+                    <li>
+                        <img src="./img/der1.svg" alt="Entrümpelung" width="114" height="114">
+                        <strong>Entrümpelung und Entsorgung vom Dachboden bis zum Keller</strong>
+                    </li>
+                    <li>
+                        <img src="./img/der2.svg" alt="Transparenter" width="114" height="114">
+                        <strong>Transparenter Verkauf in Ihrem Auftrag</strong>
+                    </li>
+                    <li>
+                        <img src="./img/der3.svg" alt="Bewertung" width="114" height="114">
+                        <strong>Bewertung Ihren Wertgegenstände und Nachlasses</strong>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <section class="about" id="about">
+            <div class="container">
+                <img src="./img/dish.webp" alt="dish" class="about-dish" width="415" height="302">
+                <h2>About Us</h2>
+                <div class="about-inner">
+                    <div class="about-plate">
+                        <img src="./img/plate.webp" alt="plate" width="762" height="1051">
+                    </div>
+                    <div class="about-content">
+                        <p>Der Verkauf erfolgt über Versteigerungsplattformen wie ebay, Catawiki und direkt an entsprechende Sammler.<br>
+                        Über ebay und Catawiki können Artikel weltweit verkauft werden. Der gesamte Versand incl. Zollabwicklung wird von uns übernommen. Erfahrungsgemäß wird durch den direkten Verkauf an den Endkunden das 2 bis 2,5 fache des Händler Angebots erzielt.<br>
+                        Der Verkauf erfolgt erst nach einer vorherigen Einschätzung und Ihrem Einverständnis. Die Verkaufsprovision ist abhängig vom Wert des Artikels und des Verkaufsaufwandes.<br>
+                        Der Verkauf erfolgt vollkommen transparent und mit allen Detailinformationen.<br><br>
+                        Zudem haben Sie die Möglichkeit die Auktionen live zu verfolgen. Gerne übernehmen wir auch komplette Räumungen bis zur besenreinen Übergabe.</p>
+                        <div class="about-subtitle">Gerne verkaufen wir für Sie:</div>
+                        <ul class="resetul about-list">
+                            <li>Silber</li>
+                            <li>Kunst</li>
+                            <li>Münzen</li>
+                            <li>Echtschmuck</li>
+                            <li>Eisenbahnen</li>
+                            <li>Antiquitäten</li>
+                            <li>Uhren</li>
+                            <li>Kriegserinnerungen</li>
+                            <li>Alte Kameras</li>
+                            <li>Antike Bücher</li>
+                            <li>Hochwertige Accessoires</li>
+                            <li>Antiken Schmuck</li>
+                            <li>Hochwertiges Porzellan</li>
+                            <li>Briefmarken Sammlungen</li>
+                            <li>Altes Spielzeug</li>
+                            <li>Markenartikel Z.B. Von Louis Vuitton, Chanel, Prada, Hermes</li>
+                            <li>Hifi Artikel <br>Alt Und Modern</li>
+                            <li>Alte Weine Und Ungeöffnete <br>Spirituosen</li>
+                            <li>Alte Und Neue Musik Instrumente</li>
+                            <li>Alte Und Neue Designer Möbel</li>
+                            <li>Usw.</li>
+                        </ul>
+                        <a href="#" target="_blank" class="btn">SEE PDF FILE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer class="botbar">
+            <div class="container botbar-group">
+                <a href="/" class="logo2">
+                    <img src="./img/logo2.svg" alt="logo" width="193" height="118">
+                </a>
+                <nav class="botbar-nav">
+                    <ul class="resetul">
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </nav>
+                <div class="botbar-links">
+                    <a href="tel:017667451011" class="botbar-tel">
+                        <img src="./img/ftel.svg" alt="phone number" width="35" height="35">
+                        <span>0176 6745 1011</span>
+                    </a>
+                    <a href="mailto:nils-jacobi@gmx.net" class="botbar-mail">
+                        <img src="./img/fmail.svg" alt="email" width="35" height="35">
+                        <span>nils-jacobi@gmx.net</span>
+                    </a>
+                    <a href="/" class="botbar-web">
+                        <img src="./img/fweb.svg" alt="email" width="35" height="35">
+                        <span>www.r-m-service.de</span>
+                    </a>
+                </div>
+            </div>
+            <div class="botbar-copy">Rhein-Main Nachlass- & Handelsservice, Abeggstr. 2, 65193 Wiesbaden, <br>
+                Inh. Janina Sinner <br>
+                USt-IdNr. DE 362249336 <br>
+                Finanzamt Wiesbaden
+            </div>
+        </footer>
+    </div></main>
+</body>
+</html>
